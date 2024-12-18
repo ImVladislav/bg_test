@@ -1,0 +1,120 @@
+
+body {
+    margin: 0;
+  }
+  
+  #pen-as-header-question {
+    display: none;
+  }
+  
+  #profile-image {
+    display: none;
+  }
+  
+  #profile-name {
+    transform: skew(5deg, 10deg) translateX(-5%);
+  }
+  
+  #profile-name-header, #profile-username {
+    display: inline-block;
+    color: snow;
+    text-shadow: dimgray 0px 0px 5px;
+  }
+  
+  #profile-header {
+    background-color: black;
+    background-image: none;
+    background-size: cover;
+    
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #profile-header::after {
+    content: "";
+  
+    position: absolute;
+  
+    /* top: 0vw;
+    left: 0;
+    
+    width: 120vw;
+    height: 120vw; */
+
+    top: -33vw;
+    left: -351px;
+    width: 170vw;
+    height: 170vw;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://plus.unsplash.com/premium_photo-1668392256944-99299c0c9915?q=80&w=1800&auto=format');
+    
+    filter: sepia(1) hue-rotate(-200deg) contrast(100) blur(4px) brightness(1.8);
+    
+    transform-origin: center;  
+    animation: spin 1.8s infinite steps(60);
+  }
+  
+  /* #profile-header:hover::after {
+    content: "";
+  
+    position: absolute;
+  
+    top: 0vw;
+    left: 0;
+    
+    width: 110vw;
+    height: 110vw;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://plus.unsplash.com/premium_photo-1668392256944-99299c0c9915?q=80&w=1800&auto=format');
+    
+    transform-origin: center;
+    animation: pretwist 12s ease-out, aurora 30s 3s infinite linear, twist 0.5s 6s infinite steps(60);
+  } */
+  
+  @keyframes spin {
+    from {
+      transform: rotate(360deg) translateZ(0);
+    }
+    to {
+      transform: rotate(0deg) translateZ(0);
+    }
+  }
+  
+  @keyframes twist {
+    from {
+      transform: rotate(360deg) translateZ(0);
+    }
+    to {
+      transform: rotate(0deg) translateZ(0);
+    }
+  }
+  
+  @keyframes aurora {
+    0% {
+      filter: sepia(1) hue-rotate(-200deg) contrast(100) blur(6px) brightness(2);
+    }
+    50% {
+      filter: sepia(1) hue-rotate(-25deg) contrast(100) blur(13px) brightness(3);
+    }
+    100% {
+      filter: sepia(1) hue-rotate(-200deg) contrast(100) blur(6px) brightness(2);
+    }
+  }
+  
+  @keyframes pretwist {
+    from {
+      transform: rotate(360deg) translateZ(0);
+      filter: sepia(1) hue-rotate(-200deg) contrast(300) blur(4px) brightness(1.8);
+    }
+    to {
+      transform: rotate(-3600deg) translateZ(0);
+      filter: sepia(1) hue-rotate(-200deg) contrast(300) blur(8px) brightness(2);
+    }
+  }
+  
